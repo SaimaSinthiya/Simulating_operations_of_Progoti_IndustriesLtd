@@ -49,6 +49,7 @@ public class LoginSceneFxmlController implements Initializable {
     @FXML
     private void loginOnMouseClick(MouseEvent event) throws IOException {
         boolean valid = true;
+        System.out.println("hello");
 
         String userIdStr = userIdTextField.getText();
         int userId = 0;

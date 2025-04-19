@@ -1,5 +1,7 @@
 package com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1_ManagingDirector.Profile;
 
+
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,14 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1_ManagingDirector.Goal1.BusinessOverviewSceneController;
-import mainpkg.MD.Goal2_InventoryProduction.InventoryProductionSceneController;
-import mainpkg.MD.Goal3_Attendance.AttendanceSceneController;
-import mainpkg.MD.Goal4_Inventory.InventorySceneController;
-import mainpkg.MD.Goal5_FinancialReports.FinancialReportsSceneController;
-import mainpkg.MD.Goal6_SalesOrders.SalesOrdersSceneController;
-import mainpkg.MD.Goal7_Notifications.NotificationsSceneController;
-import mainpkg.MD.Goal8_CustomerFeedback.CustomerFeedbackSceneController;
+
 
 public class ManagingDirectorDashBoardController implements Initializable {
 
@@ -47,8 +42,9 @@ public class ManagingDirectorDashBoardController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // Optional: anything to do right after loading the scene
     }
+    }
 
-    @FXML
+   /* @FXML
     private void businessOverviewOnMouseClick(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/mainpkg/MD/Goal1_BusinessOverview/BusinessOverviewScene.fxml"));
         Parent root = loader.load();
@@ -145,4 +141,4 @@ public class ManagingDirectorDashBoardController implements Initializable {
         stage.setTitle("Login");
         stage.show();
     }
-}
+}*/

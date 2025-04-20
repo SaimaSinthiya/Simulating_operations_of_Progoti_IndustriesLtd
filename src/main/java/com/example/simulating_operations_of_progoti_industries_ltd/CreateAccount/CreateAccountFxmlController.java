@@ -1,8 +1,6 @@
 package com.example.simulating_operations_of_progoti_industries_ltd.CreateAccount;
 
-import com.example.simulating_operations_of_progoti_industries_ltd.AbstractClass.AppendableObjectOutputStream;
-import com.example.simulating_operations_of_progoti_industries_ltd.AbstractClass.User;
-import com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1_ManagingDirector.Profile.ManagingDirector;
+import com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.ManagingDirector;
 //import com.example.simulating_operations_of_progoti_industries_ltd.Customer.Customer;
 //import com.example.simulating_operations_of_progoti_industries_ltd.SalesExecutive.SalesExecutive;
 //import com.example.simulating_operations_of_progoti_industries_ltd.FinanceDepartment.FinanceDepartmentHead;

@@ -55,7 +55,7 @@ public class CreateAccountFxmlController {
         userType = userTypeCB.getValue();
         dob = dobDP.getValue();
 
-        if (userType == "Librian") {
+        if (userType == "Managing Director") {
             id = random.nextInt(10000, 99999);
             ManagingDirector md = new ManagingDirector(id, name, email, pN, password, userType, address, dob);
             showTA.setText(md.toString());

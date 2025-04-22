@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.CustomerFeedbackController">
+    <children>
+        <Label layoutX="280.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-text-fill: darkblue;" text="Customer Feedback" />
+
+        <TableView fx:id="feedbackTable" layoutX="30.0" layoutY="70.0" prefHeight="250.0" prefWidth="740.0">
+            <columns>
+                <TableColumn fx:id="nameCol" prefWidth="150.0" text="Customer Name" />
+                <TableColumn fx:id="feedbackCol" prefWidth="250.0" text="Feedback" />
+                <TableColumn fx:id="statusCol" prefWidth="150.0" text="Status" />
+                <TableColumn fx:id="resolutionCol" prefWidth="189.0" text="Resolution Time" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="30.0" layoutY="340.0" text="Select Feedback to Mark as Resolved:" />
+        <Button layoutX="280.0" layoutY="340.0" onAction="#handleResolveFeedback" prefHeight="25.0" prefWidth="101.0" text="Resolve" />
+        <Label fx:id="statusLabel" layoutX="30.0" layoutY="370.0" textFill="red" />
+
+        <Button layoutX="22.0" layoutY="492.0" onAction="#handleBack" text="Back to Dashboard" />
+    </children>
+
+</AnchorPane>

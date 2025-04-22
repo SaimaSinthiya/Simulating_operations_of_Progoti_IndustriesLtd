@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SakibAlHasan.User4.GenerateFinanceSummary"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SakibAlHasan.User4.GenerateFinanceSummaryController"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

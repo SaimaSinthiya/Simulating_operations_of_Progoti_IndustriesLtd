@@ -26,7 +26,7 @@
             <columns>
                 <TableColumn fx:id="productNameColumn" prefWidth="350" text="Product Name" />
                 <TableColumn fx:id="unitsProducedColumn" prefWidth="200" text="Units Produced" />
-            <TableColumn fx:id="unitsProducedColumn1" prefWidth="209.0" text="Type" />
+            <TableColumn fx:id="TypeColumn" prefWidth="209.0" text="Type" />
             </columns>
         </TableView>
     </VBox>

@@ -11,4 +11,34 @@
             fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User2.CustomerPlaceOrderController"
             prefHeight="400.0" prefWidth="600.0">
 
+
+    <VBox alignment="CENTER" spacing="15.0" layoutX="200.0" layoutY="80.0">
+
+        <Label text="Place Your Order" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <Label text="Product Name:" />
+        <TextField fx:id="productNameField" promptText="Enter product name" />
+
+        <Label text="Quantity:" />
+        <TextField fx:id="quantityField" promptText="Enter quantity" />
+
+        <Label text="Delivery Address:" />
+        <TextField fx:id="addressField" promptText="Enter delivery address" />
+
+        <Label text="Delivery Method:" />
+        <ComboBox fx:id="deliveryMethodComboBox" promptText="Select method" prefWidth="200.0" />
+
+        <Button fx:id="placeOrderButton"
+                text="Place Order"
+                onAction="#handlePlaceOrder"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"
+                prefWidth="200.0" />
+
+        <Button fx:id="backButton"
+                text="Back"
+                onAction="#handleBack"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"
+                prefWidth="200.0" />
+    </VBox>
+
 </AnchorPane>

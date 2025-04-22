@@ -10,5 +10,26 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.SalesAndOrdersController"
             prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Sales and Orders" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <HBox spacing="10">
+            <TextField fx:id="orderIdField" promptText="Order ID" />
+            <TextField fx:id="productNameField" promptText="Product Name" />
+            <TextField fx:id="quantityField" promptText="Quantity" />
+            <Button text="Add Order" onAction="#addOrderOnAction"/>
+            <Button text="Delete Selected" onAction="#deleteOrderOnAction"/>
+        </HBox>
+
+        <TableView fx:id="orderTable" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="150"/>
+                <TableColumn fx:id="productNameColumn" text="Product Name" prefWidth="350"/>
+                <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="250"/>
+            </columns>
+        </TableView>
+
+        <Button text="Back to Dashboard" onAction="#backToDashboardOnAction"/>
+    </VBox>
 
 </AnchorPane>

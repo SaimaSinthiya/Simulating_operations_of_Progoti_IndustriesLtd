@@ -1,7 +1,5 @@
 package com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1;
 
-
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,6 +18,7 @@ public class BusinessOverviewController {
 
     private ManagingDirector user;
 
+    // Setter method to pass user details
     public void setter(ManagingDirector user) {
         this.user = user;
     }
@@ -40,13 +39,13 @@ public class BusinessOverviewController {
         // Using vehicle names instead of quarters
         quarterComboBox.getItems().addAll("Pajero", "HiAce", "Saga", "Leyland");
 
-        // TableColumn setup using property names
+
         monthCol.setCellValueFactory(new PropertyValueFactory<>("month"));
         revenueCol.setCellValueFactory(new PropertyValueFactory<>("totalRevenue"));
         profitCol.setCellValueFactory(new PropertyValueFactory<>("netProfit"));
         growthCol.setCellValueFactory(new PropertyValueFactory<>("growthRate"));
 
-        // Load data from file
+
         performanceTable.setItems(readData());
     }
 
@@ -71,7 +70,8 @@ public class BusinessOverviewController {
     private void handleFilter(ActionEvent e) {
         String vehicle = quarterComboBox.getValue();
         if (vehicle == null) {
-            statusLabel.setText("Select a vehicle."); return;
+            statusLabel.setText("Select a vehicle.");
+            return;
         }
 
         ObservableList<BusinessPerformance> filtered = FXCollections.observableArrayList();
@@ -112,7 +112,7 @@ public class BusinessOverviewController {
 
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User1/ManagingDirectorDashboard.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User1/ManagingDirectorDashBoard.fxml"));
         Parent root = loader.load();
         ManagingDirectorDashBoardFxmlController controller = loader.getController();
         controller.setter(user);
@@ -121,4 +121,5 @@ public class BusinessOverviewController {
         stage.setTitle("Managing Director Dashboard");
         stage.show();
     }
+
 }

@@ -4,32 +4,50 @@ import com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class InventoryProductionController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @FXML private ComboBox<String> productTypeComboBox;
-    @FXML private TextField productNameField;
-    @FXML private TextField unitsProducedField;
-    @FXML private TableView<Product> productionTable;
-    @FXML private TableColumn<Product, String> productNameColumn;
-    @FXML private TableColumn<Product, Integer> unitsProducedColumn;
-    @FXML private TableColumn<Product, String> productTypeColumn;  // fx:id="unitsProducedColumn1" in FXML
+public class InventoryProductionController implements Initializable {
+
+    @FXML
+    private ComboBox<String> productTypeComboBox;
+
+    @FXML
+    private TextField productNameField;
+
+    @FXML
+    private TextField unitsProducedField;
+
+    @FXML
+    private TableView<Product> productionTable;
+
+    @FXML
+    private TableColumn<Product, String> productNameColumn;
+
+    @FXML
+    private TableColumn<Product, Integer> unitsProducedColumn;
+
+    @FXML
+    private TableColumn<Product, String> TypeColumn;
 
     private ObservableList<Product> productList = FXCollections.observableArrayList();
 
-    @FXML
-    public void initialize() {
-        // Set product types
-        productTypeComboBox.getItems().addAll("Vehicle", "Machinery");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // Set up columns
+        productTypeComboBox.setItems(FXCollections.observableArrayList("Vehicle", "Machinery", "Electronic"));
+
+
         productNameColumn.setCellValueFactory(new PropertyValueFactory<>("productName"));
         unitsProducedColumn.setCellValueFactory(new PropertyValueFactory<>("unitsProduced"));
-        productTypeColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
+        TypeColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
 
-        // Bind list to table
+
         productionTable.setItems(productList);
     }
 
@@ -37,34 +55,35 @@ public class InventoryProductionController {
     private void addProductionOnAction() {
         String productType = productTypeComboBox.getValue();
         String productName = productNameField.getText().trim();
-        String unitsStr = unitsProducedField.getText().trim();
+        String unitsProducedText = unitsProducedField.getText().trim();
 
-        if (productType == null || productName.isEmpty() || unitsStr.isEmpty()) {
-            showAlert("Validation Error", "All fields must be filled.");
+
+        if (productType == null || productName.isEmpty() || unitsProducedText.isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Validation Error", "All fields must be filled out.");
             return;
         }
 
 
         if (productType.equals("Vehicle") && !productName.matches("[A-Za-z0-9 ]+")) {
-            showAlert("Validation Error", "Vehicle name can only contain letters, numbers, and spaces.");
+            showAlert(Alert.AlertType.ERROR, "Validation Error", "Vehicle name must contain only letters and numbers.");
             return;
         }
 
         int units;
         try {
-            units = Integer.parseInt(unitsStr);
+            units = Integer.parseInt(unitsProducedText);
             if (units <= 0) {
-                showAlert("Validation Error", "Units must be a positive number.");
+                showAlert(Alert.AlertType.ERROR, "Validation Error", "Units produced must be a positive number.");
                 return;
             }
         } catch (NumberFormatException e) {
-            showAlert("Validation Error", "Units must be a number.");
+            showAlert(Alert.AlertType.ERROR, "Validation Error", "Units produced must be a valid number.");
             return;
         }
 
 
-        Product product = new Product(productName, units, productType);
-        productList.add(product);
+        Product newProduct = new Product(productName, units, productType);
+        productList.add(newProduct);
 
 
         productNameField.clear();
@@ -72,11 +91,11 @@ public class InventoryProductionController {
         productTypeComboBox.getSelectionModel().clearSelection();
     }
 
-    private void showAlert(String title, String content) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
+    private void showAlert(Alert.AlertType type, String title, String message) {
+        Alert alert = new Alert(type);
         alert.setTitle(title);
         alert.setHeaderText(null);
-        alert.setContentText(content);
+        alert.setContentText(message);
         alert.showAndWait();
     }
 }

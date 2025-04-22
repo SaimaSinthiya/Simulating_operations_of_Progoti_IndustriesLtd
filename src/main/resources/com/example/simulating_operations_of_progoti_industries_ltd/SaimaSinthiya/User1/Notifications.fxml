@@ -8,7 +8,12 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.Notifications"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.NotificationsController"
             prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Notifications" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+        <ListView fx:id="notificationListView" prefHeight="450.0" />
+        <Button text="Back to Dashboard" onAction="#backToDashboardOnAction" />
+    </VBox>
 
 </AnchorPane>

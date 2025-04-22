@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="613.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.InventoryProductionController">
+<AnchorPane prefHeight="613.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.InventoryManagementController">
     <children>
         <VBox spacing="15" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
             <Label prefHeight="56.0" prefWidth="289.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Inventory Management" />

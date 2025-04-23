@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="747.0" prefWidth="1264.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.nafiur.QualityControllManagerView">
+   <children>
+      <Label layoutX="50.0" layoutY="31.0" text="Manager Id" />
+      <Label layoutX="50.0" layoutY="76.0" text="Name" />
+      <Label layoutX="50.0" layoutY="124.0" text="Department" />
+      <Label layoutX="50.0" layoutY="176.0" text="Gender" />
+      <Label layoutX="52.0" layoutY="220.0" text="InspectionsDone" />
+      <TextField fx:id="managerIdTextField" layoutX="141.0" layoutY="27.0" />
+      <TextField fx:id="nameTextField" layoutX="141.0" layoutY="72.0" />
+      <RadioButton fx:id="maleradioButton" layoutX="111.0" layoutY="176.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="190.0" layoutY="176.0" mnemonicParsing="false" text="Female" />
+      <CheckBox fx:id="inspectionsProductsCheckBox" layoutX="154.0" layoutY="220.0" mnemonicParsing="false" text="Products" />
+      <CheckBox fx:id="inspectionsMaterialCheckBox" layoutX="240.0" layoutY="220.0" mnemonicParsing="false" text="material" />
+      <Label layoutX="52.0" layoutY="257.0" text="Pass Products" />
+      <Label layoutX="38.0" layoutY="304.0" text="Fail Products" />
+      <TextField fx:id="passproductsTextField" layoutX="148.0" layoutY="253.0" />
+      <TextField fx:id="failProductsTextField" layoutX="141.0" layoutY="300.0" />
+      <Label layoutX="350.0" layoutY="168.0" text="Shift Time" />
+      <DatePicker fx:id="shiftTimeDatePicker" layoutX="416.0" layoutY="164.0" />
+      <ComboBox fx:id="departmentComboBox" layoutX="135.0" layoutY="120.0" prefWidth="150.0" />
+      <Button layoutX="46.0" layoutY="361.0" mnemonicParsing="false" onAction="#addManagerOnActionButton" text="Add  Manager " />
+      <Label fx:id="warningLabel" layoutX="825.0" layoutY="85.0" prefHeight="162.0" prefWidth="188.0" style="-fx-border-color: red;" text="Label" />
+      <TableView fx:id="managerInfoTableView" layoutX="25.0" layoutY="409.0" prefHeight="200.0" prefWidth="1225.0">
+        <columns>
+          <TableColumn fx:id="managerIdTableView" minWidth="0.0" prefWidth="236.0" text="Manager Id" />
+          <TableColumn fx:id="nameIdTableView" prefWidth="280.0" text="Name" />
+            <TableColumn fx:id="departmentTableView" prefWidth="166.0" text="Department" />
+            <TableColumn fx:id="genderTableView" prefWidth="115.0" text="Gender" />
+            <TableColumn fx:id="inspectionsTableView" text="Inspections" />
+            <TableColumn fx:id="passProductsTableView" prefWidth="87.0" text="Pass products" />
+            <TableColumn fx:id="failProductsTableView" prefWidth="92.0" text="Fail Products" />
+            <TableColumn fx:id="shiftTimeTableView" prefWidth="75.0" text="Shift Time" />
+            <TableColumn fx:id="managerSkillTableView" prefWidth="93.0" text="Manager Skill" />
+        </columns>
+      </TableView>
+      <Label layoutX="389.0" layoutY="249.0" text="Manager Skill" />
+      <CheckBox fx:id="managerSkillGoodCheckbox" layoutX="481.0" layoutY="245.0" mnemonicParsing="false" text="Good" />
+      <CheckBox fx:id="managerSkillBadCheckbox" layoutX="481.0" layoutY="278.0" mnemonicParsing="false" text="Bad" />
+      <Button layoutX="377.0" layoutY="361.0" mnemonicParsing="false" onAction="#showOnlyManagerOnActionButton" text="Show Only Male Manager" />
+   </children>
+</AnchorPane>

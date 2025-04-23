@@ -1,8 +1,14 @@
 package com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class FinanceDepartmentHeadDashBoardController {
 
@@ -38,49 +44,59 @@ public class FinanceDepartmentHeadDashBoardController {
 
     }
 
-    private void handleViewFinancialRecords() {
-        System.out.println("Navigating to Financial Records...");
-
-    }
-
-    private void handleManageBudget() {
-        System.out.println("Navigating to Budget Management...");
-
-    }
-
-    private void handleProcessPayments() {
-        System.out.println("Navigating to Payments...");
-
-    }
-
-    private void handleTrackRevenue() {
-        System.out.println("Navigating to Revenue Tracking...");
-
-    }
-
-    private void handleGenerateAuditReports() {
-        System.out.println("Navigating to Audit Reports...");
-
-    }
-
-    private void handleAnalyzeExpenses() {
-        System.out.println("Navigating to Expense Analysis...");
-
-    }
-
-    private void handleManageUserPermissions() {
-        System.out.println("Navigating to User Permissions...");
-
-    }
-
-    private void handlePerformRiskAssessment() {
-        System.out.println("Navigating to Risk Assessment...");
-
+    private void loadSceneWithTryCatch(String fxmlPath, ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error loading FXML: " + fxmlPath);
+        }
     }
 
     @FXML
-    private void signout(ActionEvent event) {
-        System.out.println("Signing out...");
+    public void goToFinancialRecords(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/FinancialRecords.fxml", event);
+    }
 
+    @FXML
+    public void goToBudgetManagement(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/ManageBudget.fxml", event);
+    }
+
+    @FXML
+    public void goToPayments(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/ProcessPayments.fxml", event);
+    }
+
+    @FXML
+    public void goToRevenueTracking(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/TrackRevenue.fxml", event);
+    }
+
+    @FXML
+    public void goToAuditReports(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/GenerateAuditReports.fxml", event);
+    }
+
+    @FXML
+    public void goToExpenseAnalysis(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/AnalyzeExpenses.fxml", event);
+    }
+
+    @FXML
+    public void goToUserPermissions(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/ManageUserPermissions.fxml", event);
+    }
+
+    @FXML
+    public void goToRiskAssessment(ActionEvent event) {
+        loadSceneWithTryCatch("/com/example/simulating_operations_of_progoti_industries_ltd/Sakib/User4/PerformRiskAssessment.fxml", event);
+    }
+
+    @FXML
+    public void signOut(ActionEvent event) {
+        System.out.println("Signing out...");
     }
 }

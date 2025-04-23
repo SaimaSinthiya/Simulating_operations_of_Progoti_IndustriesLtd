@@ -9,15 +9,15 @@
     <VBox alignment="CENTER" layoutX="-54.666666666666664" layoutY="-123.0" prefHeight="775.0" prefWidth="650.0" spacing="20.0" AnchorPane.leftAnchor="-55.0" AnchorPane.rightAnchor="-46.0" AnchorPane.topAnchor="-123.0">
         <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Finance Department Head Dashboard" />
 
-        <Button fx:id="btnViewFinancialRecords" text="1. View Financial Records" />
-        <Button fx:id="btnManageBudget" text="2. Manage Budget" />
-        <Button fx:id="btnProcessPayments" text="3. Process Payments" />
-        <Button fx:id="btnTrackRevenue" text="4. Track Revenue" />
-        <Button fx:id="btnGenerateAuditReports" text="5. Generate Audit Reports" />
-        <Button fx:id="btnAnalyzeExpenses" text="6. Analyze Expenses" />
-        <Button fx:id="btnManageUserPermissions" text="7. Manage User Permissions" />
-        <Button fx:id="btnPerformRiskAssessment" text="8. Perform Risk Assessment" />
-      <Button fx:id="btnPerformRiskAssessment1" layoutX="255.0" layoutY="570.0" onAction="#signout" prefHeight="25.0" prefWidth="165.0" text="signout" />
+        <Button onAction="#btnViewFinancialRecords" text="1. View Financial Records" />
+        <Button onAction="#btnManageBudget" text="2. Manage Budget" />
+        <Button onAction="#btnProcessPayments" text="3. Process Payments" />
+        <Button onAction="#btnTrackRevenue" text="4. Track Revenue" />
+        <Button onAction="#btnGenerateAuditReports" text="5. Generate Audit Reports" />
+        <Button onAction="#btnAnalyzeExpenses" text="6. Analyze Expenses" />
+        <Button onAction="#btnManageUserPermissions" text="7. Manage User Permissions" />
+        <Button onAction="#btnPerformRiskAssessment" text="8. Perform Risk Assessment" />
+      <Button layoutX="255.0" layoutY="570.0" onAction="#signout" prefHeight="25.0" prefWidth="165.0" text="signout" />
 
     </VBox>
 

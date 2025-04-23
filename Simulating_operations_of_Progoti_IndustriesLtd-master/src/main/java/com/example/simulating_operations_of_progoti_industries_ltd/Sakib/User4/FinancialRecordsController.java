@@ -1,5 +1,6 @@
 package com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -9,56 +10,63 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class FinancialRecordsController {
 
     @FXML
-    private TableView<FinancialRecord> financialRecordsTable;
+    private TableView<Revenue> revenueTrackingTable;
 
     @FXML
-    private TableColumn<FinancialRecord, String> recordIdColumn;
+    private TableColumn<Revenue, String> monthColumn;
 
     @FXML
-    private TableColumn<FinancialRecord, String> dateColumn;
+    private TableColumn<Revenue, Double> totalRevenueColumn;
 
     @FXML
-    private TableColumn<FinancialRecord, String> typeColumn;
+    private TableColumn<Revenue, Double> netProfitColumn;
 
     @FXML
-    private TableColumn<FinancialRecord, Double> amountColumn;
-
-    @FXML
-    private TableColumn<FinancialRecord, String> descriptionColumn;
-
-    @FXML
-    private Button btnAddNewRecord;
-
-    @FXML
-    private Button btnUpdateRecord;
-
-    @FXML
-    private Button btnBackToDashboard;
+    private TableColumn<Revenue, Double> growthRateColumn;
 
     @FXML
     public void initialize() {
-
-        recordIdColumn.setCellValueFactory(new PropertyValueFactory<>("recordId"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
-        amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
-        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
-
-
+        monthColumn.setCellValueFactory(new PropertyValueFactory<>("month"));
+        totalRevenueColumn.setCellValueFactory(new PropertyValueFactory<>("totalRevenue"));
+        netProfitColumn.setCellValueFactory(new PropertyValueFactory<>("netProfit"));
+        growthRateColumn.setCellValueFactory(new PropertyValueFactory<>("growthRate"));
     }
 
     private void handleAddNewRecord() {
-        System.out.println("Adding a new financial record...");
+        String month = "";
+        Double totalRevenue = 0.0;
+        Double netProfit = 0.0;
+        Double growthRate = 0.0;
 
+        if (month.isEmpty() || totalRevenue <= 0 || netProfit <= 0 || growthRate <= 0) {
+            System.out.println("Please fill in all fields correctly.");
+            return;
+        }
+
+        System.out.println("Adding a new record for month: " + month);
     }
 
     private void handleUpdateRecord() {
-        System.out.println("Updating financial record...");
+        String month = "";
+        Double totalRevenue = 0.0;
+        Double netProfit = 0.0;
+        Double growthRate = 0.0;
 
+        if (month.isEmpty() || totalRevenue <= 0 || netProfit <= 0 || growthRate <= 0) {
+            System.out.println("Please fill in all fields correctly.");
+            return;
+        }
+
+        System.out.println("Updating record for month: " + month);
     }
 
-    private void handleBackToDashboard() {
-        System.out.println("Navigating back to Dashboard...");
+    @FXML
+    public void addNewRecordButtonOnClick(ActionEvent actionEvent) {
+        handleAddNewRecord();
+    }
 
+    @FXML
+    public void updateNewRecordButtonOnClick(ActionEvent actionEvent) {
+        handleUpdateRecord();
     }
 }

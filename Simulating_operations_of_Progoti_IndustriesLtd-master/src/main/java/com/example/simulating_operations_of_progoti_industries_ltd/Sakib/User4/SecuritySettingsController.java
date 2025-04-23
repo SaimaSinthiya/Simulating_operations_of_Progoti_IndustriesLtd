@@ -2,7 +2,6 @@ package com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 public class SecuritySettingsController {
@@ -12,9 +11,6 @@ public class SecuritySettingsController {
 
     @FXML
     private TextField confirmPasswordField;
-
-    @FXML
-    private CheckBox enableTwoFactorCheckbox;
 
     @FXML
     private Button btnSaveSettings;
@@ -30,20 +26,21 @@ public class SecuritySettingsController {
     private void handleSaveSettings() {
         String password = passwordField.getText();
         String confirmPassword = confirmPasswordField.getText();
-        boolean isTwoFactorEnabled = enableTwoFactorCheckbox.isSelected();
 
-        if (password.equals(confirmPassword)) {
-            System.out.println("Password set successfully.");
-            if (isTwoFactorEnabled) {
-                System.out.println("Two-Factor Authentication enabled.");
-            } else {
-                System.out.println("Two-Factor Authentication disabled.");
-            }
-        } else {
-            System.out.println("Passwords do not match.");
+        if (password.isEmpty() || confirmPassword.isEmpty()) {
+            System.out.println("Password fields cannot be empty.");
+            return;
         }
+
+        if (password.length() < 3) {
+            System.out.println("Password must be at least 3 characters long.");
+            return;
+        }
+
+        System.out.println("Password set successfully.");
     }
 
+    @FXML
     private void handleBackToDashboard() {
         System.out.println("Navigating back to Dashboard...");
     }

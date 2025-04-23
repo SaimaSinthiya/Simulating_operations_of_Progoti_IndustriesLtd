@@ -38,6 +38,16 @@ public class SecuritySettingsController {
         }
 
         System.out.println("Password set successfully.");
+        if (password.equals(confirmPassword)) {
+            System.out.println("Password set successfully.");
+            if (isTwoFactorEnabled) {
+                System.out.println("Two-Factor Authentication enabled.");
+            } else {
+                System.out.println("Two-Factor Authentication disabled.");
+            }
+        } else {
+            System.out.println("Passwords do not match.");
+        }
     }
 
     @FXML

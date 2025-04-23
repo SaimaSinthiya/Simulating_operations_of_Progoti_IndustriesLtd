@@ -36,28 +36,6 @@ public class RiskAnalysisController {
     }
 
     private void handleAddNewRisk() {
-        String riskId = "";
-        String description = "";
-        String riskLevel = "";
-        String mitigationPlan = "";
-
-        if (riskId.isEmpty() || description.isEmpty() || riskLevel.isEmpty() || mitigationPlan.isEmpty()) {
-            System.out.println("Please fill in all fields.");
-            return;
-        }
-
-
-        Set<String> validRiskLevels = new HashSet<>();
-        validRiskLevels.add("Low");
-        validRiskLevels.add("Medium");
-        validRiskLevels.add("High");
-
-        if (!validRiskLevels.contains(riskLevel)) {
-            System.out.println("Invalid risk level. Please select a valid risk level (Low, Medium, High).");
-            return;
-        }
-
-        System.out.println("Adding a new risk with ID: " + riskId);
     }
 
     private void handleUpdateRisk() {
@@ -87,20 +65,5 @@ public class RiskAnalysisController {
 
     private void handleBackToDashboard() {
         System.out.println("Navigating back to Dashboard...");
-    }
-
-    @FXML
-    public void backToDashBoardButtonOnClick(ActionEvent actionEvent) {
-        handleBackToDashboard();
-    }
-
-    @FXML
-    public void addNewRiskButtonOnClick(ActionEvent actionEvent) {
-        handleAddNewRisk();
-    }
-
-    @FXML
-    public void updateRiskButtonOnClick(ActionEvent actionEvent) {
-        handleUpdateRisk();
     }
 }

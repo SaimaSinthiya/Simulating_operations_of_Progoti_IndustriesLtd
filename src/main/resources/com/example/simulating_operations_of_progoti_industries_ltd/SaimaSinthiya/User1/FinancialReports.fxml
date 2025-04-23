@@ -18,7 +18,7 @@
                 <Button fx:id="generateReportButton" onAction="#generateReportOnAction" text="Generate Report" />
             </HBox>
 
-            <!-- Table for displaying financial data -->
+
             <TableView fx:id="financialReportTable" prefHeight="200" prefWidth="600">
                 <columns>
                     <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date" />
@@ -28,6 +28,7 @@
                 </columns>
             </TableView>
         </VBox>
+        <Button fx:id="generateReportButton1" layoutX="49.0" layoutY="25.0" onAction="#backButton" text="Back to Dashboard" />
     </children>
 
 </AnchorPane>

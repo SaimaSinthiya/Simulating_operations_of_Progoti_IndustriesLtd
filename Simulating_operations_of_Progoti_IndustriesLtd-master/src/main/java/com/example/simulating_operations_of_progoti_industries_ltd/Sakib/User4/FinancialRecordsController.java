@@ -10,19 +10,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class FinancialRecordsController {
 
     @FXML
-    private TableView<Revenue> revenueTrackingTable;
 
     @FXML
-    private TableColumn<Revenue, String> monthColumn;
+    private TableColumn<FinancialRecord, Double> amountColumn;
 
     @FXML
-    private TableColumn<Revenue, Double> totalRevenueColumn;
+    private TableColumn<FinancialRecord, String> descriptionColumn;
 
     @FXML
-    private TableColumn<Revenue, Double> netProfitColumn;
+    private Button btnAddNewRecord;
 
     @FXML
-    private TableColumn<Revenue, Double> growthRateColumn;
 
     @FXML
     public void initialize() {
@@ -33,32 +31,21 @@ public class FinancialRecordsController {
     }
 
     private void handleAddNewRecord() {
-        String month = "";
-        Double totalRevenue = 0.0;
-        Double netProfit = 0.0;
-        Double growthRate = 0.0;
+        System.out.println("Adding a new financial record...");
 
-        if (month.isEmpty() || totalRevenue <= 0 || netProfit <= 0 || growthRate <= 0) {
-            System.out.println("Please fill in all fields correctly.");
-            return;
-        }
-
-        System.out.println("Adding a new record for month: " + month);
     }
 
     private void handleUpdateRecord() {
+        System.out.println("Updating financial record...");
         String month = "";
         Double totalRevenue = 0.0;
         Double netProfit = 0.0;
         Double growthRate = 0.0;
 
-        if (month.isEmpty() || totalRevenue <= 0 || netProfit <= 0 || growthRate <= 0) {
-            System.out.println("Please fill in all fields correctly.");
-            return;
-        }
-
-        System.out.println("Updating record for month: " + month);
     }
+
+    private void handleBackToDashboard() {
+        System.out.println("Navigating back to Dashboard...");
 
     @FXML
     public void addNewRecordButtonOnClick(ActionEvent actionEvent) {

@@ -1,6 +1,5 @@
 package com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -26,12 +25,13 @@ public class InvoiceGenerationController {
 
     @FXML
     public void initialize() {
+
     }
 
     private void handleGenerateInvoice() {
         String orderId = orderIdField.getText();
         String customerName = customerNameField.getText();
-        String amountText = amountField.getText();
+        String amount = amountField.getText();
 
         if (orderId.isEmpty() || customerName.isEmpty() || amountText.isEmpty()) {
             System.out.println("Please fill in all fields.");
@@ -77,6 +77,7 @@ public class InvoiceGenerationController {
     private void handleBackToDashboard() {
         System.out.println("Navigating back to Dashboard...");
     }
+}
 
     @FXML
     public void generateInvoiceButtonOnClick(ActionEvent actionEvent) {

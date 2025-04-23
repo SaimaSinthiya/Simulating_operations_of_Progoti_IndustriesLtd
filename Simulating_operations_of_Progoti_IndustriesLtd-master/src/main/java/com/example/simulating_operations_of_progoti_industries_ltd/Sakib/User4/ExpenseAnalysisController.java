@@ -38,9 +38,7 @@ public class ExpenseAnalysisController {
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
 
 
-        btnAddNewExpense.setOnAction(e -> handleAddNewExpense());
-        btnUpdateExpense.setOnAction(e -> handleUpdateExpense());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleAddNewExpense() {

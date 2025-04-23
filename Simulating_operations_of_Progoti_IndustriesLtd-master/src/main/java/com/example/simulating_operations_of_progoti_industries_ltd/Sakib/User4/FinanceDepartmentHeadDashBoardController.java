@@ -40,47 +40,47 @@ public class FinanceDepartmentHeadDashBoardController {
 
     private void handleViewFinancialRecords() {
         System.out.println("Navigating to Financial Records...");
-        // Load FinancialRecord scene
+
     }
 
     private void handleManageBudget() {
         System.out.println("Navigating to Budget Management...");
-        // Load Budget scene
+
     }
 
     private void handleProcessPayments() {
         System.out.println("Navigating to Payments...");
-        // Load Payments scene
+
     }
 
     private void handleTrackRevenue() {
         System.out.println("Navigating to Revenue Tracking...");
-        // Load Revenue scene
+
     }
 
     private void handleGenerateAuditReports() {
         System.out.println("Navigating to Audit Reports...");
-        // Load Audit Reports scene
+
     }
 
     private void handleAnalyzeExpenses() {
         System.out.println("Navigating to Expense Analysis...");
-        // Load Expense Analysis scene
+
     }
 
     private void handleManageUserPermissions() {
         System.out.println("Navigating to User Permissions...");
-        // Load User Permissions scene
+
     }
 
     private void handlePerformRiskAssessment() {
         System.out.println("Navigating to Risk Assessment...");
-        // Load Risk Assessment scene
+
     }
 
     @FXML
     private void signout(ActionEvent event) {
         System.out.println("Signing out...");
-        // Add sign-out logic and go back to login screen
+
     }
 }

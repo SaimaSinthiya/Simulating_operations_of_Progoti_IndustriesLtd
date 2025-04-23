@@ -37,31 +37,28 @@ public class FinancialRecordsController {
 
     @FXML
     public void initialize() {
-        // Set the cell value factory for each column using PropertyValueFactory
+
         recordIdColumn.setCellValueFactory(new PropertyValueFactory<>("recordId"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        // Set event handlers for buttons
-        btnAddNewRecord.setOnAction(e -> handleAddNewRecord());
-        btnUpdateRecord.setOnAction(e -> handleUpdateRecord());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleAddNewRecord() {
         System.out.println("Adding a new financial record...");
-        // Implement logic to add a new financial record
+
     }
 
     private void handleUpdateRecord() {
         System.out.println("Updating financial record...");
-        // Implement logic to update an existing financial record
+
     }
 
     private void handleBackToDashboard() {
         System.out.println("Navigating back to Dashboard...");
-        // Implement logic to go back to the Finance Department Head Dashboard
+
     }
 }

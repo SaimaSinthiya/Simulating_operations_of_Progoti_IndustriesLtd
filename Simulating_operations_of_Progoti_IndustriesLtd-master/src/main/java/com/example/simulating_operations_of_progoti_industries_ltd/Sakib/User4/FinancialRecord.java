@@ -10,7 +10,7 @@ public class FinancialRecord implements Serializable {
     private double amount;
     private String description;
 
-    // Constructor
+
     public FinancialRecord(String recordId, String date, String type, double amount, String description) {
         this.recordId = recordId;
         this.date = date;
@@ -19,7 +19,7 @@ public class FinancialRecord implements Serializable {
         this.description = description;
     }
 
-    // Getters
+
     public String getRecordId() {
         return recordId;
     }
@@ -40,7 +40,7 @@ public class FinancialRecord implements Serializable {
         return description;
     }
 
-    // Setters
+
     public void setRecordId(String recordId) {
         this.recordId = recordId;
     }

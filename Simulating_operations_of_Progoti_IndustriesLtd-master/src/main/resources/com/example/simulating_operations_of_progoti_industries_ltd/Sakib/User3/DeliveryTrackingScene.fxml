@@ -6,9 +6,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.DeliveryTrackingScene"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.DeliveryTrackingController"
             prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Delivery Tracking" />
+
+        <TextField fx:id="orderIdField" promptText="Enter Order ID" />
+        <TextField fx:id="trackingNumberField" promptText="Enter Tracking Number" />
+
+        <Button fx:id="btnTrackDelivery" text="Track Delivery" />
+        <Button fx:id="btnBackToDashboard" text="Back to Dashboard" />
+    </VBox>
 
 </AnchorPane>

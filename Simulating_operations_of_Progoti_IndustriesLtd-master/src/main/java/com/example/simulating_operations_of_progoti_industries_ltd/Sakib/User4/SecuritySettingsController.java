@@ -24,8 +24,7 @@ public class SecuritySettingsController {
 
     @FXML
     public void initialize() {
-        btnSaveSettings.setOnAction(e -> handleSaveSettings());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleSaveSettings() {

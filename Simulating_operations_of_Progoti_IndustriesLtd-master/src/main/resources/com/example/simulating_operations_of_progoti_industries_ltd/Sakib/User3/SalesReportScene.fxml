@@ -6,9 +6,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.SalesReportScene"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.SalesReportSceneController"
             prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Sales Report" />
+
+        <TableView fx:id="salesReportTable">
+            <TableColumn fx:id="orderIdColumn" text="Order ID" />
+            <TableColumn fx:id="customerNameColumn" text="Customer Name" />
+            <TableColumn fx:id="totalAmountColumn" text="Total Amount" />
+            <TableColumn fx:id="statusColumn" text="Status" />
+        </TableView>
+
+        <Button fx:id="btnGenerateReport" text="Generate Report" />
+        <Button fx:id="btnExportReport" text="Export Report" />
+        <Button fx:id="btnBackToDashboard" text="Back to Dashboard" />
+    </VBox>
 
 </AnchorPane>

@@ -36,8 +36,7 @@ public class RevenueTrackingController {
         netProfitColumn.setCellValueFactory(new PropertyValueFactory<>("netProfit"));
         growthRateColumn.setCellValueFactory(new PropertyValueFactory<>("growthRate"));
 
-        btnExportRevenue.setOnAction(e -> handleExportRevenue());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleExportRevenue() {

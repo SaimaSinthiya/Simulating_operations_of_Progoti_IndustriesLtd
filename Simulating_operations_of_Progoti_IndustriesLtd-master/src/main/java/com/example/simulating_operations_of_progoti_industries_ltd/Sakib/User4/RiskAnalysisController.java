@@ -39,9 +39,7 @@ public class RiskAnalysisController {
         riskLevelColumn.setCellValueFactory(new PropertyValueFactory<>("riskLevel"));
         mitigationPlanColumn.setCellValueFactory(new PropertyValueFactory<>("mitigationPlan"));
 
-        btnAddNewRisk.setOnAction(e -> handleAddNewRisk());
-        btnUpdateRisk.setOnAction(e -> handleUpdateRisk());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleAddNewRisk() {

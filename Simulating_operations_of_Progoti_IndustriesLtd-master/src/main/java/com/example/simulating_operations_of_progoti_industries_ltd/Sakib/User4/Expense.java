@@ -7,14 +7,14 @@ public class Expense implements Serializable {
     private double amount;
     private String description;
 
-    // Constructor
+
     public Expense(String category, double amount, String description) {
         this.category = category;
         this.amount = amount;
         this.description = description;
     }
 
-    // Getters
+
     public String getCategory() {
         return category;
     }
@@ -27,7 +27,7 @@ public class Expense implements Serializable {
         return description;
     }
 
-    // Setters (if needed)
+
     public void setCategory(String category) {
         this.category = category;
     }

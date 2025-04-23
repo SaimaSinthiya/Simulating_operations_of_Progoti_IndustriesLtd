@@ -6,10 +6,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.AfterSalesSupportSceneController"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.AfterSalesSupportController"
             prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="After Sales Support" />
+
+        <TextField fx:id="customerNameField" promptText="Enter your name" />
+        <TextField fx:id="orderIdField" promptText="Enter your order ID" />
+        <TextArea fx:id="issueDescriptionField" promptText="Describe the issue" wrapText="true" />
+
+        <Button fx:id="btnSubmitIssue" text="Submit Issue" />
+        <Button fx:id="btnBackToDashboard" text="Back to Dashboard" />
+    </VBox>
 
 
 </AnchorPane>

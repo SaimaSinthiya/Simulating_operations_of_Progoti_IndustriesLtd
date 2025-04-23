@@ -34,30 +34,27 @@ public class PendingPaymentsController {
 
     @FXML
     public void initialize() {
-        // Set the cell value factory for each column using PropertyValueFactory
+
         paymentIdColumn.setCellValueFactory(new PropertyValueFactory<>("paymentId"));
         dueDateColumn.setCellValueFactory(new PropertyValueFactory<>("dueDate"));
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // Set event handlers for buttons
-        btnMarkAsPaid.setOnAction(e -> handleMarkAsPaid());
-        btnExportPayments.setOnAction(e -> handleExportPayments());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleMarkAsPaid() {
         System.out.println("Marking selected payment as paid...");
-        // Implement logic to mark the selected payment as paid
+
     }
 
     private void handleExportPayments() {
         System.out.println("Exporting payments...");
-        // Implement logic to export the payments (e.g., to a CSV file)
+
     }
 
     private void handleBackToDashboard() {
         System.out.println("Navigating back to Dashboard...");
-        // Implement logic to go back to the Finance Department Head Dashboard
+
     }
 }

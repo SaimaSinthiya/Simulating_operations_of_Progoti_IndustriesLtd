@@ -55,7 +55,7 @@ public class CustomerDashBoardController {
 
     @javafx.fxml.FXML
     public void goToOrderStatus(ActionEvent event) throws IOException {
-        loadSceneWithUser("/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User2/CustomerOrderStatus.fxml", event);
+        loadSceneWithUser("/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User1/CustomerOrderStatus.fxml", event);
     }
 
     @javafx.fxml.FXML

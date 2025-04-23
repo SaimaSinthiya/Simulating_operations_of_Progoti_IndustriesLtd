@@ -32,9 +32,7 @@ public class AuditReportsController {
     @FXML
     public void initialize() {
 
-        btnGenerateNewReport.setOnAction(e -> handleGenerateNewReport());
-        btnExportReport.setOnAction(e -> handleExportReport());
-        btnBackToDashboard.setOnAction(e -> handleBackToDashboard());
+
     }
 
     private void handleGenerateNewReport() {

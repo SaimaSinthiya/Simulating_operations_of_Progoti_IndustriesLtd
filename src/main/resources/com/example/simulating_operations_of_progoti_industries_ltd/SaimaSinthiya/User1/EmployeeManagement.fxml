@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="614.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.EmployeeManagementController">
+    <children>
+        <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+            <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Employee Management" />
+
+            <HBox spacing="10">
+                <Label text="Employee ID:" />
+                <TextField fx:id="employeeIdField" promptText="Enter Employee ID" />
+                <Button fx:id="validateIdButton" onAction="#ValidateId" text="Validate ID" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Name:" />
+                <TextField fx:id="nameField" promptText="Enter Employee Name" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Position:" />
+                <TextField fx:id="positionField" promptText="Enter Position" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Salary:" />
+                <TextField fx:id="salaryField" promptText="Enter Salary" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Department:" />
+                <ComboBox fx:id="departmentComboBox" promptText="Department" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Button fx:id="addEmployeeButton" onAction="#AddEmployee" text="Add Employee" />
+                <Button fx:id="updateEmployeeButton" onAction="#UpdateEmployee" text="Update Employee" />
+                <Button fx:id="deleteEmployeeButton" onAction="#DeleteEmployee" text="Delete Employee" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Filter by Department:" />
+                <ComboBox fx:id="selectDepartmentComboBox" promptText="Select Department" />
+                <Button fx:id="filterByDepartmentButton" onAction="#FilterByDepartment" text="Filter" />
+            </HBox>
+
+            <TableView fx:id="employeeTableView" prefHeight="200" prefWidth="400">
+                <columns>
+                    <TableColumn fx:id="employeeIdColumn" text="Employee ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="123.0" text="Name" />
+                    <TableColumn fx:id="positionColumn" prefWidth="103.0" text="Position" />
+                    <TableColumn fx:id="salaryColumn" prefWidth="118.0" text="Salary" />
+                    <TableColumn fx:id="departmentColumn" prefWidth="222.0" text="Department" />
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

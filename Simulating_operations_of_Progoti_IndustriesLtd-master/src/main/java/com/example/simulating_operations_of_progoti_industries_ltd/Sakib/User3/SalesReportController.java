@@ -61,37 +61,28 @@ public class SalesReportController {
 
     private void handleExportReport() {
         List<SalesRecord> salesRecords = salesReportTable.getItems();
-
-        saveReportToBinaryFile(salesRecords);
-        saveReportToTextFile(salesRecords);
+        saveReport(salesRecords);
     }
 
-    private void saveReportToBinaryFile(List<SalesRecord> salesRecords) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SalesReportData.bin"))) {
-            for (SalesRecord record : salesRecords) {
-                oos.writeObject(record);
-            }
-            System.out.println("Sales report saved to binary file.");
-        } catch (IOException e) {
-            System.out.println("Error saving sales report to binary file: " + e.getMessage());
-        }
-    }
+    private void saveReport(List<SalesRecord> salesRecords) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SalesReportData.bin"));
+             PrintWriter writer = new PrintWriter(new FileWriter("SalesReportData.txt"))) {
 
-    private void saveReportToTextFile(List<SalesRecord> salesRecords) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter("SalesReportData.txt"))) {
             for (SalesRecord record : salesRecords) {
-                writer.println("Order ID: " + record.getOrderId());
+                               oos.writeObject(record);
+
+                                writer.println("Order ID: " + record.getOrderId());
                 writer.println("Customer Name: " + record.getCustomerName());
                 writer.println("Total Amount: " + record.getTotalAmount());
                 writer.println("Status: " + record.getStatus());
                 writer.println("-----------------------------");
             }
-            System.out.println("Sales report saved to text file.");
+
+            System.out.println("Sales report saved to both binary and text files.");
         } catch (IOException e) {
-            System.out.println("Error saving sales report to text file: " + e.getMessage());
+            System.out.println("Error saving sales report: " + e.getMessage());
         }
     }
-
     @FXML
     public void generateReportButtonOnClick() {
         System.out.println("Generating Sales Report...");

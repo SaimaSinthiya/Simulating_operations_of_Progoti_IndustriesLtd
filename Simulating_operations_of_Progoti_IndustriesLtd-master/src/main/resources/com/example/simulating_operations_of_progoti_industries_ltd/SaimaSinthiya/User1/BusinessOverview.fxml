@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="621.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User1.BusinessOverviewController">
+    <children>
+        <Label layoutX="250.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-text-fill: darkblue;" text="Business Overview Dashboard" />
+
+        <TableView fx:id="performanceTable" layoutX="30.0" layoutY="60.0" prefHeight="180.0" prefWidth="740.0">
+            <columns>
+                <TableColumn fx:id="monthCol" prefWidth="135.0" text="Month" />
+                <TableColumn fx:id="revenueCol" prefWidth="129.0" text="Total Revenue" />
+                <TableColumn fx:id="profitCol" prefWidth="207.0" text="Net Profit" />
+                <TableColumn fx:id="growthCol" prefWidth="262.0" text="Growth Rate (%)" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="30.0" layoutY="260.0" text="Filter by Quarter:" />
+        <ComboBox fx:id="quarterComboBox" layoutX="140.0" layoutY="255.0" prefWidth="150.0" promptText="Select Quarter" />
+
+        <Button fx:id="filterButton" layoutX="371.0" layoutY="255.0" onAction="#handleFilter" prefHeight="25.0" prefWidth="385.0" text="Apply Filter" />
+
+        <TextField fx:id="searchField" layoutX="30.0" layoutY="300.0" prefWidth="200.0" promptText="Search by Month" />
+        <Button fx:id="searchButton" layoutX="240.0" layoutY="300.0" onAction="#handleSearch" text="Search" />
+
+        <Label fx:id="statusLabel" layoutX="30.0" layoutY="340.0" textFill="red" />
+
+        <Button fx:id="backButton" layoutX="30.0" layoutY="400.0" onAction="#handleBack" text="Back to Dashboard" />
+    </children>
+
+</AnchorPane>

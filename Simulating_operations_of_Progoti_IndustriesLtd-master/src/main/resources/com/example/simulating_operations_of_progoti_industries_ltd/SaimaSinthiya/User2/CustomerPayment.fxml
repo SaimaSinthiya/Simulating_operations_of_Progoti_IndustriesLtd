@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="661.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User2.CustomerPaymentController">
+    <VBox alignment="CENTER" layoutX="200.0" layoutY="100.0" spacing="20.0">
+        <Label fx:id="paymentTitle" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Customer Payment" />
+
+        <Label fx:id="orderIdLabel" style="-fx-font-size: 18px;" text="Order ID: " />
+        <TextField fx:id="orderIdField" promptText="Enter Order ID" style="-fx-font-size: 16px;" />
+
+        <Label fx:id="paymentAmountLabel" style="-fx-font-size: 18px;" text="Payment Amount: " />
+        <TextField fx:id="paymentAmountField" promptText="Enter Amount" style="-fx-font-size: 16px;" />
+
+        <Label fx:id="paymentMethodLabel" style="-fx-font-size: 18px;" text="Payment Method: " />
+        <ComboBox fx:id="paymentMethodCOmbobox" prefHeight="50.0" prefWidth="222.0" promptText="Enter Payment Method" />
+
+        <Button fx:id="submitPaymentButton" onAction="#handleSubmitPayment" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Submit Payment" />
+
+        <Button fx:id="backButton" onAction="#handleBack" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Back" />
+    </VBox>
+
+</AnchorPane>

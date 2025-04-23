@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.User2.CustomerPurchaseHistoryController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" layoutX="150.0" layoutY="50.0" spacing="20.0" prefWidth="500.0">
+        <Label text="Purchase History" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- TableView for purchase history -->
+        <TableView fx:id="purchaseHistoryTable" prefHeight="300.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="100.0" />
+                <TableColumn fx:id="productNameColumn" text="Product Name" prefWidth="200.0" />
+                <TableColumn fx:id="purchaseDateColumn" text="Purchase Date" prefWidth="150.0" />
+                <TableColumn fx:id="amountColumn" text="Amount" prefWidth="100.0" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="backButton" onAction="#handleBack" text="Back to Dashboard"
+                prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+    </VBox>
+
+
+
+</AnchorPane>

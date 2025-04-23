@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.simulating_operations_of_progoti_industries_ltd/com.example.simulating_operations_of_progoti_industries_ltd.SaimaSinthiya.HelloApplication
+                                com.example.simulating_operations_of_progoti_industries_ltd/com.example.simulating_operations_of_progoti_industries_ltd.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

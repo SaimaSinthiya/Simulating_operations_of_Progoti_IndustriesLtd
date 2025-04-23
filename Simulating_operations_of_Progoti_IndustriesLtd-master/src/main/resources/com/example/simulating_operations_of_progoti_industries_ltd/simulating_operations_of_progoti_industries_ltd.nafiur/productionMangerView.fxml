@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="862.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.nafiur.ProductionMangerViewController">
+   <children>
+      <Label layoutX="38.0" layoutY="39.0" text="Manager Id" />
+      <TextField fx:id="managerIdTextField" layoutX="143.0" layoutY="35.0" />
+      <Label layoutX="38.0" layoutY="78.0" text="Name" />
+      <TextField fx:id="nameTextField" layoutX="132.0" layoutY="74.0" />
+      <Label layoutX="40.0" layoutY="126.0" text="Email" />
+      <TextField fx:id="emailTextField" layoutX="111.0" layoutY="122.0" />
+      <Label layoutX="40.0" layoutY="178.0" text="Phone Number" />
+      <TextField fx:id="phoneNumberTextField" layoutX="132.0" layoutY="174.0" />
+      <Label layoutX="41.0" layoutY="222.0" text="Department" />
+      <RadioButton fx:id="productionManagerRadioButton" layoutX="132.0" layoutY="222.0" mnemonicParsing="false" text="Production Manager" />
+      <RadioButton fx:id="qualityRadioButton" layoutX="142.0" layoutY="254.0" mnemonicParsing="false" text="Quality Control Manager" />
+      <Label layoutX="376.0" layoutY="39.0" text="Current Level" />
+      <TextField fx:id="currentLevelTextField" layoutX="466.0" layoutY="35.0" />
+      <Label layoutX="376.0" layoutY="91.0" text="Re oRder" />
+      <TextField fx:id="reOrderTextField" layoutX="459.0" layoutY="87.0" />
+      <Label layoutX="387.0" layoutY="139.0" text="rawMaterialList" />
+      <CheckBox fx:id="componentsCheckBox" layoutX="497.0" layoutY="139.0" mnemonicParsing="false" text="components" />
+      <CheckBox fx:id="suppliesCheckBox" layoutX="497.0" layoutY="170.0" mnemonicParsing="false" text="supplies" />
+      <Label layoutX="373.0" layoutY="214.0" text=" deadline" />
+      <DatePicker fx:id="deadlineDatePicker" layoutX="427.0" layoutY="210.0" />
+      <Label fx:id="warningLabel" layoutX="774.0" layoutY="79.0" prefHeight="162.0" prefWidth="114.0" style="-fx-border-color: red;" />
+      <TableView fx:id="productionManagerTableView" layoutX="21.0" layoutY="406.0" prefHeight="200.0" prefWidth="1110.0">
+        <columns>
+          <TableColumn fx:id="managerIdTableView" prefWidth="93.0" text="Manager Id" />
+          <TableColumn fx:id="nameTableView" prefWidth="126.0" text="Name" />
+            <TableColumn fx:id="emailTableView" prefWidth="95.0" text="Email" />
+            <TableColumn fx:id="phoneNumberTableView" prefWidth="190.0" text="Phone Number" />
+            <TableColumn fx:id="departmentTableView" prefWidth="114.0" text="Department" />
+            <TableColumn fx:id="currentLevelTableView" prefWidth="120.0" text="Current Level" />
+            <TableColumn fx:id="reOrderTableView" prefWidth="92.0" text="RE Order" />
+            <TableColumn fx:id="rawMaterialTableView" prefWidth="162.0" text="Raw material List" />
+            <TableColumn fx:id="deadlineTableView" prefWidth="117.0" text="Deadline" />
+        </columns>
+      </TableView>
+      <Button layoutX="116.0" layoutY="308.0" mnemonicParsing="false" onAction="#showOnlyComponents" text="Show Only Components" />
+   </children>
+</AnchorPane>

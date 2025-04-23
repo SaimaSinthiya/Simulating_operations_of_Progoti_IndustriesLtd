@@ -4,8 +4,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class EmployeeManagementController {
 
@@ -33,7 +40,7 @@ public class EmployeeManagementController {
     private Button deleteEmployeeButton;
     @FXML
     private Button filterByDepartmentButton;
-
+    ManagingDirector user;
     @FXML
     public void initialize() {
         departmentComboBox.getItems().addAll("HR", "Sales", "Finance", "Production");
@@ -146,5 +153,23 @@ public class EmployeeManagementController {
         alert.setTitle(title);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    @FXML
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
+                "/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User1/ManagingDirectorDashboard.fxml"));
+
+        Parent root = fxmlLoader.load();
+        ManagingDirectorDashBoardFxmlController controller = fxmlLoader.getController();
+
+        if (this.user != null) {
+            controller.setter(this.user);
+        } else {
+            System.out.println("Warning: user is null before navigating back to dashboard.");
+        }
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

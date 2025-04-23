@@ -33,6 +33,8 @@ public class EmployeeManagementController {
     private Button deleteEmployeeButton;
     @FXML
     private Button filterByDepartmentButton;
+    @FXML
+    private Button filterByDepartmentButton1;
 
     @FXML
     public void initialize() {
@@ -146,5 +148,9 @@ public class EmployeeManagementController {
         alert.setTitle(title);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    public void back(ActionEvent actionEvent) {
     }
 }

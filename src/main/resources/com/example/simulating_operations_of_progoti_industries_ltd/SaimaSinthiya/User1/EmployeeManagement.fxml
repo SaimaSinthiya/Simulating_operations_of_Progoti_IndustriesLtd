@@ -63,5 +63,6 @@
                 </columns>
             </TableView>
         </VBox>
+        <Button fx:id="filterByDepartmentButton1" layoutX="31.0" layoutY="24.0" onAction="#back" text="Back" />
     </children>
 </AnchorPane>

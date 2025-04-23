@@ -77,14 +77,21 @@ public class CustomerFeedbackController {
     }
 
     @FXML
-    private void handleBack(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User1/ManagingDirectorDashboard.fxml"));
-        Parent root = loader.load();
-        ManagingDirectorDashBoardFxmlController controller = loader.getController();
-        controller.setter(user);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
+                "/com/example/simulating_operations_of_progoti_industries_ltd/SaimaSinthiya/User1/ManagingDirectorDashboard.fxml"));
+
+        Parent root = fxmlLoader.load();
+        ManagingDirectorDashBoardFxmlController controller = fxmlLoader.getController();
+
+        if (this.user != null) {
+            controller.setter(this.user);
+        } else {
+            System.out.println("Warning: user is null before navigating back to dashboard.");
+        }
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.setTitle("Managing Director Dashboard");
         stage.show();
     }
 }

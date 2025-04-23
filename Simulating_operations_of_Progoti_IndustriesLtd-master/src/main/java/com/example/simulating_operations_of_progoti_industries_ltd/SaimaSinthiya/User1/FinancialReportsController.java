@@ -27,6 +27,10 @@ public class FinancialReportsController {
     private TableColumn<FinancialReport, Double> netProfitColumn;
 
     private ObservableList<FinancialReport> financialReportList = FXCollections.observableArrayList();
+    @FXML
+    private Button generateReportButton1;
+    @FXML
+    private Button generateReportButton;
 
     @FXML
     public void initialize() {
@@ -60,5 +64,9 @@ public class FinancialReportsController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

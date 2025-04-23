@@ -58,8 +58,7 @@ public class PaymentViewController {
 
     ArrayList<Payment> paymentList;
     ArrayList<String> productName= new ArrayList<String>();
-    if (carCheckBox.isSelected() && carTireCheckBox.isSelected()){
-        productName.add
+
 
 
     }

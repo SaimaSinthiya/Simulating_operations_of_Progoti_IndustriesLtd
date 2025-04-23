@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4.RevenueTrackingController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Revenue Tracking" />
+
+        <TableView fx:id="revenueTrackingTable">
+            <TableColumn fx:id="monthColumn" text="Month" />
+            <TableColumn fx:id="totalRevenueColumn" text="Total Revenue" />
+            <TableColumn fx:id="netProfitColumn" text="Net Profit" />
+            <TableColumn fx:id="growthRateColumn" text="Growth Rate" />
+        </TableView>
+
+        <Button fx:id="btnExportRevenue" text="Export Revenue" />
+        <Button fx:id="btnBackToDashboard" text="Back to Dashboard" />
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4.AuditReportsController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Audit Reports" />
+
+        <TableView fx:id="auditReportsTable">
+            <TableColumn fx:id="reportIdColumn" text="Report ID" />
+            <TableColumn fx:id="periodColumn" text="Period" />
+            <TableColumn fx:id="summaryColumn" text="Summary" />
+        </TableView>
+
+        <Button fx:id="btnGenerateNewReport" text="Generate New Report" />
+        <Button fx:id="btnExportReport" text="Export Report" />
+        <Button fx:id="btnBackToDashboard" text="Back to Dashboard" />
+    </VBox>
+
+</AnchorPane>

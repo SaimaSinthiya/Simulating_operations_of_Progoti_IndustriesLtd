@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.TestDriveSceneController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" layoutX="50.0" layoutY="30.0" spacing="20.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Test Drive Booking" />
+
+        <TextArea fx:id="customerNotesField" promptText="Enter any additional notes or requests..." wrapText="true" />
+        <DatePicker fx:id="testDriveDatePicker" promptText="Select Test Drive Date" />
+
+        <Button fx:id="btnBookTestDrive" text="Book Test Drive" />
+        <Button fx:id="btnBackToDashboard" onAction="#back" text="Back to Dashboard" />
+    </VBox>
+
+</AnchorPane>

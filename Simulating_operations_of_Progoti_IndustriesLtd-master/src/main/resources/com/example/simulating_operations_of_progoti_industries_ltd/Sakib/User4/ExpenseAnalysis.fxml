@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4.ExpenseAnalysisController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Expense Analysis" />
+
+        <TableView fx:id="expenseAnalysisTable">
+            <TableColumn fx:id="categoryColumn" text="Category" />
+            <TableColumn fx:id="amountColumn" text="Amount" />
+            <TableColumn fx:id="descriptionColumn" text="Description" />
+        </TableView>
+
+        <Button fx:id="btnAddNewExpense" text="Add New Expense" />
+        <Button fx:id="btnUpdateExpense" text="Update Expense" />
+        <Button fx:id="btnBackToDashboard" text="Back to Dashboard" />
+    </VBox>
+
+</AnchorPane>

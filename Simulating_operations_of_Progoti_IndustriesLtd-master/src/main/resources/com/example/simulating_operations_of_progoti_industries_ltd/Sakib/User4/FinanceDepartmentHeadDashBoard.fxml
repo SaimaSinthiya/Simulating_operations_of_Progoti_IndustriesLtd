@@ -5,11 +5,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="564.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4.FinanceDepartmentHeadDashBoardController">
-    <VBox alignment="CENTER" layoutX="-54.666666666666664" layoutY="-123.0" prefHeight="775.0" prefWidth="650.0" spacing="20.0" AnchorPane.leftAnchor="-55.0" AnchorPane.rightAnchor="-46.0" AnchorPane.topAnchor="-123.0">
-        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Finance Department Head Dashboard" />
+<AnchorPane prefHeight="600.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4.FinanceDepartmentHeadDashBoardController">
 
+    <VBox alignment="CENTER" spacing="20.0"
+          layoutX="50.0" layoutY="30.0"
+          AnchorPane.topAnchor="30.0"
+          AnchorPane.leftAnchor="50.0"
+          AnchorPane.rightAnchor="50.0">
+
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;"
+              text="Finance Department Head Dashboard" />
+
+        <Button fx:id="btnViewBudget" text="View Budget" />
+        <Button fx:id="btnTrackExpenses" text="Track Expenses" />
+        <Button fx:id="btnGenerateFinancialReport" text="Generate Financial Report" />
+        <Button fx:id="btnApproveTransactions" text="Approve Transactions" />
+        <Button fx:id="btnManagePayroll" text="Manage Payroll" />
+        <Button fx:id="btnAllocateBudget" text="Allocate Budget" />
+        <Button fx:id="btnViewDepartmentExpenditure" text="View Department Expenditure" />
+        <Button fx:id="btnFinancialNotifications" text="Notifications" />
+        <Button fx:id="btnBackToDashboard" text="Back to Main Dashboard" />
 
     </VBox>
-
 </AnchorPane>

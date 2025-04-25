@@ -14,5 +14,10 @@ module com.example.simulating_operations_of_progoti_industries_ltd {
     opens com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User4 to javafx.fxml;
 
 
+    opens com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3 to javafx.fxml; // Make the controller accessible to JavaFX
+
+    exports com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3;
+
+
 }
 

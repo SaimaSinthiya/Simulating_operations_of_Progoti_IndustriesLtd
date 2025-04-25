@@ -5,20 +5,27 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.text.Text?>
+
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.simulating_operations_of_progoti_industries_ltd.Sakib.User3.SalesExecutiveDashboardController"
-            prefHeight="400.0" prefWidth="600.0">
-    <VBox alignment="CENTER" spacing="20.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
-        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Sales Executive Dashboard" />
+            prefHeight="500.0" prefWidth="700.0">
 
-        <Button fx:id="btnViewSalesRecords" text="View Sales Records" />
-        <Button fx:id="btnManageCustomerOrders" text="Manage Customer Orders" />
-        <Button fx:id="btnGenerateReports" text="Generate Reports" />
-        <Button fx:id="btnTrackInventory" text="Track Inventory" />
-        <Button fx:id="btnBackToDashboard" text="Back to Main Dashboard" />
+    <VBox alignment="CENTER" spacing="15.0" layoutX="50.0" layoutY="30.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Text style="-fx-font-size: 26px; -fx-font-weight: bold;" text="Sales Executive Dashboard" />
+
+        <!-- Buttons for 8 core goals -->
+        <Button fx:id="btnViewSalesRecords" text="View Sales Records" onAction="#handleViewSalesRecords" />
+        <Button fx:id="btnManageCustomerOrders" text="Manage Customer Orders" onAction="#handleManageCustomerOrders" />
+        <Button fx:id="btnGenerateReports" text="Generate Reports" onAction="#handleGenerateReports" />
+        <Button fx:id="btnTrackInventory" text="Track Inventory" onAction="#handleTrackInventory" />
+        <Button fx:id="btnGenerateInvoice" text="Generate Invoice" onAction="#handleGenerateInvoice" />
+        <Button fx:id="btnCustomerFeedback" text="Customer Feedback" onAction="#handleCustomerFeedback" />
+        <Button fx:id="btnNotifications" text="Send/View Notifications" onAction="#handleNotifications" />
+        <Button fx:id="btnViewOrderHistory" text="View Order History" onAction="#handleViewOrderHistory" />
+
+        <Separator />
+        <Button fx:id="btnBackToDashboard" text="Back to Main Dashboard" onAction="#handleBackToMainDashboard" />
     </VBox>
-
 </AnchorPane>
